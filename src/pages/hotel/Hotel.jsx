@@ -31,7 +31,7 @@ const Hotel = () => {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  const {data, loading, error} = useFetch(`${import.meta.env.VITE_SERVER_URL}/hotels/find/${id}`);
+  const {data, loading, error} = useFetch(`${process.env.VITE_SERVER_URL}/hotels/find/${id}`);
   const {user} = useContext(AuthContext);
 
   const {dates, options} = useContext(SearchContext);
