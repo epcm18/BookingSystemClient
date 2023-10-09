@@ -2,7 +2,7 @@ import useFetch from "../../hooks/useFetch";
 import "./featured.css";
 
 const Featured = () => {
-  const {data, loading, error} = useFetch("https://bookme-cee949c8ea8b.herokuapp.com/hotels/countByCity?cities=colombo,kandy,galle")
+  const {data, loading, error} = useFetch(`${import.meta.env.VITE_SERVER_URL}/hotels/countByCity?cities=colombo,kandy,galle`)
   // console.log(data);
   // console.log(data[0]);
   return (

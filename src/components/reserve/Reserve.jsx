@@ -10,7 +10,7 @@ import axios from "axios";
 
 const Reserve = ({setOpen, hotelId}) => {
     const [selectedRooms, setSelectedRooms] = useState([]);
-    const {data, loading, error} = useFetch(`https://bookme-cee949c8ea8b.herokuapp.com/hotels/rooms/${hotelId}`);
+    const {data, loading, error} = useFetch(`${import.meta.env.VITE_SERVER_URL}/hotels/rooms/${hotelId}`);
 
     const {dates} = useContext(SearchContext);
 

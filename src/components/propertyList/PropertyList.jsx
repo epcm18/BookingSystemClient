@@ -2,7 +2,7 @@ import "./propertyList.css";
 import useFetch from "../../hooks/useFetch.js";
 
 const PropertyList = () => {
-  const { data, loading, error } = useFetch("https://bookme-cee949c8ea8b.herokuapp.com/hotels/countByType");
+  const { data, loading, error } = useFetch(`${import.meta.env.VITE_SERVER_URL}/hotels/countByType`);
   // console.log("Propertylist", data[0]);
   const images = [
     "https://cf.bstatic.com/xdata/images/xphoto/square300/57584488.webp?k=bf724e4e9b9b75480bbe7fc675460a089ba6414fe4693b83ea3fdd8e938832a6&o=",

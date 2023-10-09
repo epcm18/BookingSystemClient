@@ -17,7 +17,7 @@ const List = () => {
   const [min, setMin] = useState(undefined);
   const [max, setMax] = useState(undefined);
 
-  const { data, loading, error } = useFetch(`https://bookme-cee949c8ea8b.herokuapp.com/hotels?city=${destination}&min=${min | 0}&max=${max | 999}`);
+  const { data, loading, error } = useFetch(`${import.meta.env.VITE_SERVER_URL}/hotels?city=${destination}&min=${min | 0}&max=${max | 999}`);
 
   return (
     <div>
